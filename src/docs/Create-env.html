@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Font Awesome -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
+    rel="stylesheet"
+    />
+    <title>Env</title>
+</head>
+<body>
+    <nav class="navbar navbar-expanded-lg navbar-light shadow" style="background:#11161a">      
+    <a href="" class=" nav-link nav-item navbar-brand font-weight-bold text-info"><img src="../template/udacity.png" width="150"></a>
+    </nav>
+    <div class="container">
+        <h3 class="mt-5"> <span class="badge bg-primary rounded-circle"> 1</span>  Create Env file </h3>
+        <li class="text-primary"> for windows</li>
+        <code class="border p-1 rounded"> open command prompet/cmd.exe</code>
+        <br>
+        <code class="border p-1 rounded">echo "" > .env</code>
+      <hr>
+        <li class="text-primary"> for linux </li>
+        <code class="border p-1 rounded">touch .env</code>
+      <hr>
+      <h3 class="mt-1 "> <span class="badge bg-primary rounded-circle"> 2</span> Setting Config of .env</h3>
+      <p>copy and past the following in <code> /your_project/.env </code> don't miss the secret token to be add and password</p>
+      <p class="border p-1" style="color:crimson;font-size: 14px;">
+        PORT=4000 <br>
+        PG_HOST=localhost <br>
+        PG_USER=udacity <br>
+        PG_DB=store <br>
+        PG_DB_TEST=store_test <br>
+        PG_PASSWORD= ****** <br>
+        PG_PORT=5432 <br>
+         PG_SALT_ROUND=xxxx <br>
+        PG_BCRYPY_SC=xxxx <br>
+        PG_MYTOKEN=xxxx <br>
+        ENV=dev</p>
+        <h3 class="mt-1 "> <span class="badge bg-primary rounded-circle"> 3</span> Setting Config of database.json</h3>
+      <p class="border p-1" style="color:crimson;font-size: 14px;">
+        {         "defaultEnv":{"ENV":"NODE_ENV"}
+        ,
+       "dev": {
+       "driver": "pg",
+       "host": {"ENV":"PG_HOST"},
+       "database": {"ENV":"PG_DB"},
+       "user": {"ENV":"PG_USER"},
+       "password":{"ENV":"PG_PASSWORD"},
+       "port":{"ENV":"PG_PORT"}
+     }
+   
+        ,
+       "test": {
+       "driver": "pg",
+       "host": {"ENV":"PG_HOST"},
+       "database": {"ENV":"PG_DB_TEST"},
+       "user": {"ENV":"PG_USER"},
+       "password":{"ENV":"PG_PASSWORD"},
+       "port":{"ENV":"PG_PORT"}
+     }
+   
+ 
+ }
+    </div>
+        
+</body>
+</html>

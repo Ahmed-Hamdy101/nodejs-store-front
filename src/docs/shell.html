@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Font Awesome -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
+    rel="stylesheet"
+    />
+    <title>Env</title>
+</head>
+<body>
+    <nav class="navbar navbar-expanded-lg navbar-light shadow" style="background:#11161a">      
+    <a href="" class=" nav-link nav-item navbar-brand font-weight-bold text-info"><img src="../template/udacity.png" width="150"></a>
+    </nav>
+    <div class="container">
+   <h3 class="mt-5"> <span class="badge bg-primary rounded-circle"> 1</span> Shell</h3>
+   <span>
+    ╭━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━╮
+    ╰━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╯    
+
+        ██╗░░░██╗██████╗░░█████╗░░█████╗░██╗████████╗██╗░░░██╗  ░██████╗██╗░░██╗███████╗██╗░░░░░██╗░░░░░
+        ██║░░░██║██╔══██╗██╔══██╗██╔══██╗██║╚══██╔══╝╚██╗░██╔╝  ██╔════╝██║░░██║██╔════╝██║░░░░░██║░░░░░
+        ██║░░░██║██║░░██║███████║██║░░╚═╝██║░░░██║░░░░╚████╔╝░  ╚█████╗░███████║█████╗░░██║░░░░░██║░░░░░
+        ██║░░░██║██║░░██║██╔══██║██║░░██╗██║░░░██║░░░░░╚██╔╝░░  ░╚═══██╗██╔══██║██╔══╝░░██║░░░░░██║░░░░░
+        ╚██████╔╝██████╔╝██║░░██║╚█████╔╝██║░░░██║░░░░░░██║░░░  ██████╔╝██║░░██║███████╗███████╗███████╗
+        ░╚═════╝░╚═════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░░╚═╝░░░░░░╚═╝░░░  ╚═════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚══════╝
+
+
+╭━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━╮
+╰━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╯
+   </span> 
+   <p class="text-center">This only work  on windows  Require npm or yarn to work or can run <small class="border p-2"> 'npm i -g yarn'</small> 
+    or can run <small class="border p-2"> bash install</small> run anything without yarn this a commands will run  from anywhere
+    READ SHELL ,  This under licence Udacity Created by @Turria there's more dos key in devlop <br>
+    command -- help -- <br></p>
+      <table class="table table-striped table-dark">
+      <thead>
+  <tr>
+
+      <th class="col">
+          command  
+        </th>
+        <th class="col">
+            description  
+        </th>
+</tr>
+      </thead>  
+      <tbody>
+        <tr>
+            <td>
+                ls-src
+            </td>
+            <td>
+                show tree/list of Dir    
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ps
+            </td>
+            <td>
+                run powershell  
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                repo
+            </td>
+            <td>
+                display repo project 
+            </td>
+        </tr>
+        
+        
+        <tr>
+            <td>
+                conn
+            </td>
+            <td>
+                connect to database store
+            </td>
+        </tr>
+        <tr>
+            <td>
+                store
+            </td>
+            <td>
+                create to database called store
+            </td>
+        </tr>
+        <tr>
+            <td>
+                list
+            </td>
+            <td>
+                display databases list
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                dist
+            </td>
+            <td>
+                display tables list
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                reset
+            </td>
+            <td>
+                reset database 
+            </td>
+        </tr>
+  
+        <tr>
+            <td>
+                down
+            </td>
+            <td>
+                migration down
+            </td>
+        </tr>
+        <tr>
+            <td>
+                up
+            </td>
+            <td>
+                migration up
+            </td>
+        </tr>
+        <tr>
+            <td>
+                indel
+            </td>
+            <td>
+                delete migrations list
+            </td>
+        </tr>
+        <tr>
+            <td>
+                i-create
+            </td>
+            <td>
+                add migrations
+            </td>
+        </tr>
+    </tbody>
+    <tr>
+        <td>
+            tuser-tb 
+        </td>
+        <td>
+            create user table
+        </td>
+    </tr>
+    <tr>
+        <td>
+            go
+        </td>
+        <td>
+            go to dir user
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            usrwh
+        </td>
+        <td>
+            run window of user
+        </td>
+    </tr>
+    <tr>
+        <td>
+            gx
+        </td>
+        <td>
+            quick access to git bash
+        </td>
+    </tr>
+    <tr>
+        <td>
+            wi-del 
+        </td>
+        <td>
+            Delete Migration folder
+        </td>
+    </tr>
+    <tr>
+        <td>
+           
+li-del 
+        </td>
+        <td>
+            Delete Migration folder
+        </td>
+    </tr>
+    <tr>
+        <td>
+           
+   serve       
+        </td>
+        <td>
+   sever hostname informations
+        </td>
+    </tr>
+    <tr>
+        <td>
+           
+            root       
+        </td>
+        <td>
+            show current user and hostnames
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+           
+            \          
+        </td>
+        <td>
+            back
+        </td>
+    </tr>
+    <tr>
+        <td>
+           
+            ls         
+        </td>
+        <td>
+               list me
+        </td>
+    </tr>
+    <tr>
+        <td>
+           
+            t-t         
+        </td>
+        <td>
+            show tree
+        </td>
+    </tr>
+    <tr>
+        <td>
+           
+        y-st                
+        </td>
+        <td>
+            yarn start
+        </td>
+    </tr>
+    <tr>
+        <td>
+           
+        y-de                
+        </td>
+        <td>
+            yarn devs
+        </td>
+    </tr>
+      </table>
+      
+
+    </div>
+        
+</body>
+</html>
+
