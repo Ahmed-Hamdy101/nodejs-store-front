@@ -26,6 +26,8 @@
     <a href="" class=" nav-link nav-item navbar-brand font-weight-bold text-info"><img src="../template/udacity.png" width="150"></a>
     </nav>
     <div class="container">
+        <h3 class="mt-5"> <span class="badge bg-primary rounded-circle"> 1</span>  if u won't to  processing please go to install create-database.sh </h3>
+        <br>
         <h3 class="mt-5"> <span class="badge bg-primary rounded-circle"> 1</span>  Create Env file </h3>
         <li class="text-primary"> for windows</li>
         <code class="border p-1 rounded"> open command prompet/cmd.exe</code>
@@ -35,45 +37,79 @@
         <li class="text-primary"> for linux </li>
         <code class="border p-1 rounded">touch .env</code>
       <hr>
-      <h3 class="mt-1 "> <span class="badge bg-primary rounded-circle"> 2</span> Setting Config of .env</h3>
-      <p>copy and past the following in <code> /your_project/.env </code> don't miss the secret token to be add and password</p>
-      <p class="border p-1" style="color:crimson;font-size: 14px;">
-        PORT=4000 <br>
-        PG_HOST=localhost <br>
-        PG_USER=udacity <br>
-        PG_DB=store <br>
-        PG_DB_TEST=store_test <br>
-        PG_PASSWORD= ****** <br>
-        PG_PORT=5432 <br>
-         PG_SALT_ROUND=xxxx <br>
-        PG_BCRYPY_SC=xxxx <br>
-        PG_MYTOKEN=xxxx <br>
-        ENV=dev</p>
-        <h3 class="mt-1 "> <span class="badge bg-primary rounded-circle"> 3</span> Setting Config of database.json</h3>
-      <p class="border p-1" style="color:crimson;font-size: 14px;">
-        {         "defaultEnv":{"ENV":"NODE_ENV"}
-        ,
-       "dev": {
-       "driver": "pg",
-       "host": {"ENV":"PG_HOST"},
-       "database": {"ENV":"PG_DB"},
-       "user": {"ENV":"PG_USER"},
-       "password":{"ENV":"PG_PASSWORD"},
-       "port":{"ENV":"PG_PORT"}
-     }
-   
-        ,
-       "test": {
-       "driver": "pg",
-       "host": {"ENV":"PG_HOST"},
-       "database": {"ENV":"PG_DB_TEST"},
-       "user": {"ENV":"PG_USER"},
-       "password":{"ENV":"PG_PASSWORD"},
-       "port":{"ENV":"PG_PORT"}
-     }
-   
+      <h3 class="mt-1 "> <span class="badge bg-primary rounded-circle"> 2</span> How to connect to database</h3>
+
+      <ul>
+        <li><span class="badge bg-primary rounded-circle"> 1</span> npm</li>
+         <code> npm run install </code>
+       <li> <span class="badge bg-primary rounded-circle"> 2</span>yarn</li>
+      <code> yarn install </code> 
+      <li><span class="badge bg-primary rounded-circle"> 3</span> make sure the server is running on a port 4000 Otherwise will not working  </li>
+      <code>Server is starting at port: 4000 </code> 
+       <li><span class="badge bg-primary rounded-circle"> 4</span> Creating Database  </li>
+       <code>psql -U your-username -d database-name  #store</code>
+       <li><span class="badge bg-primary rounded-circle"> 5</span> Type Password of Your Database   </li>
+       <code>your password is :  xxxxxxx </code>
+       <li><span class="badge bg-primary rounded-circle"> 6</span> connect to the database   </li>
+       <code>postgres# \c store     </code>
+       <li><span class="badge bg-primary rounded-circle"> 7</span> Creata Database   </li>
+       <code>postgres# Create database store     </code>
+       <li><span class="badge bg-primary rounded-circle"> 8</span>install db-migration  </li>
+       <code> yarn i -g db-migrate <br></code>
+       <code> yarn add db-migrate db-migrate-pg <br></code> 
+       <code> i --save-dev @types/pg  </code>
+       <li class="mt-1 "> <span class="badge bg-primary rounded-circle"> 9</span> Setting Config of .env</li>
+       <p>copy and past the following in <code> /your_project/.env </code> don't miss the secret token to be add and password and missing</p>
+       <p class="border p-1" style="color:crimson;font-size: 14px;">
+         PORT=4000 <br>
+         PG_HOST=localhost <br>
+         PG_USER=your-username #udacity <br>
+         PG_DB=your-database  #store <br>
+         PG_DB_TEST=your-database-test #store-test <br>
+         PG_PASSWORD= your-password <br>
+         PG_PORT=5432  <br>
+          PG_SALT_ROUND=10 <br>
+         PG_BCRYPY_SC=  <br>
+         PG_MYTOKEN=<br>
+         ENV=dev</p>
+         <li class="mt-1 "> <span class="badge bg-primary rounded-circle"> 10</span> Setting Config of database.json</li>
+         <p class="border p-1" style="color:crimson;font-size: 14px;">
+           { "defaultEnv":{"ENV":"ENV"}
+           ,<br>
+          "dev": {<br>
+          "driver": "pg",<br>
+          "host": {"ENV":"PG_HOST"},<br>
+          "database": {"ENV":"PG_DB"},<br>
+          "user": {"ENV":"PG_USER"},<br>
+          "password":{"ENV":"PG_PASSWORD"},<br>
+          "port":{"ENV":"PG_PORT"}<br>
+        }
+        <br>
+           ,
+          "test": {<br>
+          "driver": "pg",<br>
+          "host": {"ENV":"PG_HOST"},<br>
+          "database": {"ENV":"PG_DB_TEST"},<br>
+          "user": {"ENV":"PG_USER"},<br>
+          "password":{"ENV":"PG_PASSWORD"},<br>
+          "port":{"ENV":"PG_PORT"}<br>
+        }  
+    }</p>
+    <li class="mt-1 "> <span class="badge bg-primary rounded-circle"> 11</span> migration up </li>
+    <code> db-migrate up </code>    
+          
+    <li class="mt-1 "> <span class="badge bg-primary rounded-circle"> 12</span> run the server </li>
+    <code> yarn dev </code>
+
+    <li class="mt-1 "> <span class="badge bg-primary rounded-circle"> 13</span> or run start </li>
+    <code> yarn start </code>
+
+    <li class="mt-1 "> <span class="badge bg-primary rounded-circle"> 14</span> for testing </li>
+    <code> yarn test </code>
+        
+          </ul>
+      </p>
  
- }
     </div>
         
 </body>

@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "s-install": "bash install.sh",
+    "d-install": "bash create-database.sh",
+    "s-install": "bash win-install.sh",
     "test": "npx tsc && jasmine",
     "dev": "nodemon --exec npx ts-node ./src/index.ts",
     "clean": "rimraf build/",

@@ -1,4 +1,4 @@
-{         "defaultEnv":{"ENV":"NODE_ENV"}
+{         "defaultEnv":{"ENV":"ENV"}
        ,
       "dev": {
       "driver": "pg",

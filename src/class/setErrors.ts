@@ -1,6 +1,6 @@
 //CLASS FOR HANFDLING ERRORS
 
-class Error {
+class Cerror {
 // PROPERITES FOR SETTING ERRORS 
 public error?:string;
 public message?:string;
@@ -9,4 +9,4 @@ public stack?:string;
 
 }
 
-export default Error;
+export default Cerror;

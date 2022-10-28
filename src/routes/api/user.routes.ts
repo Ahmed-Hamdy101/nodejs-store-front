@@ -6,7 +6,7 @@ import  * as handlers from "../../handlers/userControllers";
 // create intance from  routes
 const usrRouts = Router();
 // add Routers assined to first Endpoint 
-usrRouts.route('/').get( authenticationMiddleware,handlers.GetAllUsers);
+usrRouts.route('/all').get( authenticationMiddleware,handlers.GetAllUsers);
 usrRouts.route( '/:id').get( authenticationMiddleware,handlers.GetSpecificUser);
 usrRouts.route('/register').post(authenticationMiddleware,handlers.CreateRecordUser)
 usrRouts.route('/:id/edit').patch( authenticationMiddleware,handlers.UpdateRecordUser);

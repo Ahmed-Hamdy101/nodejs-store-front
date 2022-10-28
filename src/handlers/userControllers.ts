@@ -71,21 +71,21 @@ export const GetSpecificUser =async (req:Request, res:Response,next:NextFunction
 // creating express response
 export const CreateRecordUser =async (req:Request, res:Response,next:NextFunction) => {       
   // handdling errors !
-  const {f_name,l_name,passwords} = req.body;
+  const {f_name,l_name,secret} = req.body;
   
-  if (!f_name&&l_name&&passwords) {
+  if (!f_name&&l_name&&secret) {
 
-          if (f_name && l_name && passwords == '' ) {
+          if (f_name && l_name && secret == '' ) {
                   return res.send(_error_general.checkIn.POST_ISEMPTY)
           }
           if ( isNaN(parseInt( f_name && l_name)) ){
                   return res.send(_error_general.checkType.CHECKIS_STR)
           }
 
-          if ( typeof f_name && l_name && passwords !== 'string' ) {
+          if ( typeof f_name && l_name && secret !== 'string' ) {
                   return  res.send(_error_general.checkType.CHECKIS_STR)
           }
-          if ( passwords.length<6 ) {
+          if ( secret.length<6 ) {
                   return  res.send(_error_general.checkIn.PASS)
           }
 
@@ -111,12 +111,12 @@ export const CreateRecordUser =async (req:Request, res:Response,next:NextFunctio
 // creating express response
 export const UpdateRecordUser =async (req:Request, res:Response,next:NextFunction) => {
   const id = req.params.id as  unknown as string;
-  const {f_name,l_name,passwords} =req.body
+  const {f_name,l_name,secret} =req.body
 
-  if(!f_name&&l_name&&passwords) {
-          if (f_name && l_name && passwords == '' ){return res.send(_error_general.checkIn.POST_ISEMPTY)}
-          if ( typeof f_name && l_name && passwords !== 'string' ){return  res.send(_error_general.checkType.CHECKIS_STR)}
-          if ( passwords.length<6 ){return  res.send(_error_general.checkIn.PASS)}
+  if(!f_name&&l_name&&secret) {
+          if (f_name && l_name && secret == '' ){return res.send(_error_general.checkIn.POST_ISEMPTY)}
+          if ( typeof f_name && l_name && secret !== 'string' ){return  res.send(_error_general.checkType.CHECKIS_STR)}
+          if ( secret.length<6 ){return  res.send(_error_general.checkIn.PASS)}
     }
   // VALID ID
   if(id == "" ) {
@@ -169,8 +169,8 @@ export const DeleteUser =async (req:Request, res:Response,next:NextFunction) => 
  export const authentication = async (req:Request, res:Response,next:NextFunction) => {
   
   try{
-          const {f_name ,l_name,passwords}= req.body;
-          const userPayload = await Usermodel.Auth(f_name,l_name,passwords);    
+          const {f_name ,passwords}= req.body;
+          const userPayload = await Usermodel.verifyAuthSigninUser(f_name,passwords);    
           const token = jwt.sign({userPayload},config.secureToken as unknown as string)
           if(!userPayload) {
             return res.status(401).json({status:"error",message:"user not Auth!"})  

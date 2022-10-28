@@ -13,6 +13,7 @@ serve=nslookup -server 127.0.0.1 $T
 
 root=whoami && hostname$T
 
+t-help=bash help.sh
 
 go= start cd c:/users/%username% $T
 

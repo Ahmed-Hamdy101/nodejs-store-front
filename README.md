@@ -16,54 +16,34 @@
 
 ## Contents:
 
-* I  <a  href="#id1">ENV</a>
+* I  <a  href="#id1">step by step   Connect to database and create Env Files</a>
 * II   <a  href="#id2">package  && installation instructions</a>
 * III <a  href="#id3"> Run the Server</a>
-* IIII  <a  href="#id4">Shell</a>
+* IIII  <a  href="#id4">My Shell</a>
 * V  <a  href="#id5">All API</a>
 * VI  <a  href="#id6">Database</a>
 * VII <a  href="#id7">Testing </a>
 
-##### commands
-```shell
- command -- help -- i had deploy it on windows you see shell  docs
- ls-src       show tree/list of Dir
- ps          run powershell
- epo         display repo project
- onn          connect to database store
- tore         create to database store
- list         display databases list
- dist       display tables list
- reset        reset database
- down         migration down
- up           migration up
+##### Windows commands
+>   yarn s-install     #require yarn 
 
---MORE--
+or if u have a bash shell 
 
- indel        delete migrations list
- mi-create     add migrations
- tuser-tb     create user table
- go           go to dir user
- usrwh        run window of user
- gx           quick access to git bash
- udip         WARNING Udacity-Security-exception
- wi-del       Delete Migration folder
- li-del       Delete Migration folder
- serve        sever hostname informations
- root         show current user and hostname
- /            Forward
- \            back
- ls           list me
- t-t          show tree
- y-st         yarn dev
-```
+>  bash [Win-install.sh](./win-install.sh)
+
+##### Install database and run the server
+>   yarn d-install
+
+or
+
+>  bash [create-database.sh](./create-database.sh)
 
 <br>
 
+or you can go to **Step by step** 
+##### <a id="id1" href="#"> Step by step   Connect to database and create Env Files</a> :
 
-##### <a id="id1" href="#"> ENV</a> :
-
-for how to setup  env file go to check from here <a  href="https://htmlpreview.github.io/?https://github.com/Turria101/Store-Front/blob/master/src/docs/Create-env.html" > Env</a>
+for how to setup  env file go to check from here <a  href="https://htmlpreview.github.io/?https://github.com/Turria101/Store-Front/blob/master/src/docs/Create-env.html" > connect to database and create env</a>
 
 #
 ##### <a id="id2"> Package installation instructions</a> :
@@ -85,11 +65,11 @@ run this command
 ```bash
 Server port : 4000
 Database port : 5432
-host : localhost
+Server : localhost
 ```
 #
-##### <a id="id4">Shell</a> :
-
+##### <a id="id4">Win-Shell</a> :
+Working on Windows i haven't tested on liux machine  yet 
 I have Creted a Shell inside the repo 
 you can check From my document here [ shell](https://htmlpreview.github.io/?https://github.com/Turria101/Store-Front/blob/master/src/docs/shell.html) 
 
@@ -106,7 +86,7 @@ for more information [API](./REQUIREMENTS.md)
     </th>
     <tbody>
         <tr>
-            <td>/api/findAll/</td>
+            <td>/api/products/findAll</td>
             <td>GET</td>
             <td> valid</td>
         </tr>
@@ -127,7 +107,7 @@ for more information [API](./REQUIREMENTS.md)
             <td>valid token</td>
         </tr>
         <tr>
-            <td>/api/users/</td>
+            <td>/api/users/all</td>
             <td>GET</td>
             <td> invalid  </td>
         </tr>
@@ -177,7 +157,7 @@ for more information [API](./REQUIREMENTS.md)
             <td>valid</td>
         </tr>
         <tr>
-            <td>/api/orders/:oid/Orderproduct</td>
+            <td>/api/orders/:pid/Orderproduct</td>
             <td>GET</td>
             <td>valid</td>
         </tr>

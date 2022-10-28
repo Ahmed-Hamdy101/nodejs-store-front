@@ -2,9 +2,9 @@ echo -e " \e[32mWelcome in Udacity HELP COMMAND... PRESS ANY KEY TO CONTINUE....
 
 echo -e " \e[31m________________________________ WELCOME IN Udacity SHELL Windows Verison 1.1 ______________________________________________________ "
 bash shape.sh 
-echo -e " \e[31mRequire npm or yarn for installtion or u can type 'bash s-install' install for yarn 'npm i -g yarn'...  \e[0m "
+echo -e " \e[31mRequire npm or yarn to work at pacakages.json..for install 'npm i -g yarn'... run it from packages.json \e[0m "
 
-echo -e " \e[31mUdacity Shell ,  This under licence Udacity Created by @Turria there's more dos key in devlop in linux machine "
+echo -e " \e[31mREAD SHELL ,  This under licence Udacity Created by @Turria there's more dos key in devlop"
 
 echo -e " \e[31mcommand -- help --\e[0m"
 

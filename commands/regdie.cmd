@@ -1,0 +1,2 @@
+REG ADD "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Command Processor" /v Autorun /d "doskey /macrofile="C:\Users\%username%\Documents\2nd_Project\project_2\commands\macros.doskey" "  /f
+REG QUERY "HKCU\Software\Microsoft\Command Processor" /v Autorun 

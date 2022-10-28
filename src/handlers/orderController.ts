@@ -61,7 +61,7 @@ import {_error_general }  from "../errors/errors";
 //get-order-product by Orderid
 export const GetOrderproduct =async (req:Request, res:Response,next:NextFunction) => {
         //store the id that come from Query string-id 
-        const id = req.params.oid as unknown as string;
+        const id = req.params.pid as unknown as string;
         //validations
         // if (id == null  && undefined && "") {
         //   res.json({status:420,message:`Query string is empty of ${id}`})

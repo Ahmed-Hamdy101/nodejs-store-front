@@ -1,45 +1,46 @@
 //import express
 import {NextFunction, Request,Response } from "express";
 import jwt from "jsonwebtoken";
-import ERROR from "../../class/setErrors";
+import Cerror from "../../class/setErrors";
 import config from "../../config/config";
 
 const unauthorized =(next:NextFunction)=>{
 
-    const error:ERROR = new Error("ERROR NOT VERIFY TOKEN  ! ");
+    const error:Cerror = new Error("ERROR NOT VERIFY TOKEN  ! ");
     error.status = 401;
     next(error) ; 
 }
 
-const ValidToken = async (req:Request,_res:Response,next:NextFunction) =>
+const AVToken = async (req:Request,_res:Response,next:NextFunction) =>
 {
    try {
         // get auth
-        const authheader= req.get('Authorization');
-       if (authheader) {
-         const bearer = authheader.split(' ')[0].toLowerCase();
-         const requiretoken = authheader.split(' ')[1];
-         if (requiretoken && bearer === 'bearer') {
-           const decode = jwt.verify(requiretoken,config.secureToken as unknown as string);
-                if(decode){
-                    
-                    next();
-                }else{
-                    unauthorized(next);
-                }
+        const authheader= req.get('Authorization') as string;
 
-         }else{
-            unauthorized(next);
-         }        
-       } else {
-        // no token 
-        unauthorized(next);
-       }
+        switch (authheader) {
+            case  authheader :
+                const bearer = authheader.substring( 0,  authheader.indexOf(' ')).toLowerCase();
+                const token = authheader.substring( authheader.indexOf(' ')+1,authheader.length);
+               if ((token && bearer).includes('bearer')) {
+                 const jwtverify = jwt.verify(token,config.secureToken as unknown as string);
+                 jwtverify ? next() : unauthorized(next)  
+               } else{
+                  unauthorized(next);
+               }   
+                break;
         
-    }catch (error) {
-        unauthorized(next)
-    }
+            default:
+                unauthorized(next);
+                break;
+        }
+    }  // end try catch
+       catch (error) {
+                unauthorized(next)
+            }
+            
+        }
 
-};
 
-export default ValidToken;
+ 
+export default AVToken;
+

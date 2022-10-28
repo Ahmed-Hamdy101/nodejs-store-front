@@ -97,23 +97,26 @@ export class USER_MODEL {
 
 
 
-  async Auth(f_name:string,l_name:string,passwords:string): Promise<User|null> {
+  async verifyAuthSigninUser(f_name:string,passwords:string): Promise<User|null> {
     try {
-      const conn = await client.connect();
-       const sql = 'SELECT passwords FROM user_tb WHERE f_name=$1 AND l_name=($2)';
+      const database = await client.connect();
+       const sql = 'SELECT passwords FROM user_tb WHERE f_name=$1';
        // @ts-ignore
-        const result = await conn.query(sql, [f_name,l_name]);
-        
-       if (result.rows.length) {
-        const {passwords:hash_passwd} = result.rows[0];
-        const isPass = bcrypt.compareSync(`${passwords}${config.peppar}`,hash_passwd); 
-        if (isPass) {
-          const userDetail = await conn.query('SELECT id ,f_name ,l_name FROM user_tb WHERE f_name=($1) AND l_name=($2)',[f_name,l_name]);
-          return userDetail.rows[0];
+       
+        const fetch = await database.query(sql, [f_name]);
+        // store the result in  variables 
+        const rows =  fetch.rows.length;
+        switch (rows) {
+          case rows :
+          const {passwords:psd }=fetch.rows[0], bcry= bcrypt.compareSync(`${passwords}${config.peppar}`,psd);
+          (bcry == true ? "success!": "Error in bcry") 
+          const query ='SELECT * FROM user_tb WHERE f_name=($1)', fetchAll  =  await  database.query(query,[f_name]) ;
+          return fetchAll.rows[0];
+
+          default:
+          database.release();
+          return null;
         }
-      } 
-      conn.release();
-      return null;
       } catch (err) {
         throw new Error(`Unable to Auth !${err} `);
     }
@@ -124,3 +127,4 @@ export class USER_MODEL {
 
 
 export default USER_MODEL;
+
