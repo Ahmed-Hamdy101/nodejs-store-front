@@ -27,6 +27,7 @@ echo " Let's Edit  .env  files in your own  are u ready press enter ! "
 read
 vi .env  
 echo " Press any key to create database.json"
+read
 echo '{         "defaultEnv":{"ENV":"ENV"}
        ,
       "dev": {
