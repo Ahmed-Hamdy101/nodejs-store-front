@@ -99,7 +99,7 @@ export const CreateRecordUser =async (req:Request, res:Response,next:NextFunctio
                 return res.status(401).json({status:"error",message:"Cannot create token ! or generated"})  
               }
           // this a success message
-          return  res.json({status:"Ok!",data:{...UserCreation,token},message:"This Fine The User has been Created"});
+          return  res.json({status:"Ok!",data:{...UserCreation,token},message:"This Fine The User has been Created and also token "});
  
   }catch (error) {
           res.status(400).json(error);      
