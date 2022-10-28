@@ -59,7 +59,7 @@ run this command
 > yarn start
 
 * install my script 
-> yarn inst
+>  yarn s-install 
 
 * Port
 ```bash
