@@ -94,8 +94,12 @@ export const CreateRecordUser =async (req:Request, res:Response,next:NextFunctio
   try{     
           // take requset from the body as post data 
           const UserCreation = await Usermodel.CreateUser(req.body);
+          const token = jwt.sign({UserCreation},config.secureToken as unknown as string);
+          if(!UserCreation) {
+                return res.status(401).json({status:"error",message:"Cannot create token ! or generated"})  
+              }
           // this a success message
-          return  res.json({status:"Ok!",data:{...UserCreation},message:"This Fine The User has been Created"});
+          return  res.json({status:"Ok!",data:{...UserCreation,token},message:"This Fine The User has been Created"});
  
   }catch (error) {
           res.status(400).json(error);      
@@ -171,11 +175,11 @@ export const DeleteUser =async (req:Request, res:Response,next:NextFunction) => 
   try{
           const {f_name ,passwords}= req.body;
           const userPayload = await Usermodel.verifyAuthSigninUser(f_name,passwords);    
-          const token = jwt.sign({userPayload},config.secureToken as unknown as string)
-          if(!userPayload) {
-            return res.status(401).json({status:"error",message:"user not Auth!"})  
-          }
-          return res.status(200).json({status:"success!",data:{...userPayload,token} ,message:"user is Auth"})  
+        //   const token = jwt.sign({userPayload},config.secureToken as unknown as string)
+        //   if(!userPayload) {
+        //     return res.status(401).json({status:"error",message:"user not exist!"})  
+        //   }
+          return res.status(200).json({status:"success!",data:{...userPayload} ,message:"user is exit"})  
     }catch(error) {
           res.status(400).json(error);      
           next(error);
