@@ -172,8 +172,8 @@ check from <a href="./REQUIREMENTS.md" >Requirement</a>
  <h4><a id="id7"> Testing </a> </h4> :
 <code> npm run test </code>
 
-<code>  result :
-```shell
+<code>
+ shell
 yarn run v1.22.19
 warning package.json: "test" is also the name of a node core module
 $ npx tsc && jasmine
