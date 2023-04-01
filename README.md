@@ -65,12 +65,14 @@ Server port : 4000
 Database port : 5432
 Server : localhost
 ```
+<hr>
 <h1> <a id="id4" >Win-Shell</a> </h1>
+<p>
 Working on Windows i haven't tested on liux machine  yet 
-I have Creted a Shell inside the repo 
-you can check From my document here <a hre="https://htmlpreview.github.io/?https://github.com/Turria101/Store-Front/blob/master/src/docs/shell.html">link</a>
+I have Creted a Shell inside the repo  you can check From my document here <a href="https://htmlpreview.github.io/?https://github.com/Turria101/Store-Front/blob/master/src/docs/shell.html" >link</a> </p>
 
 <h1> <a id="id5" >All API</a> </h1> 
+
 <p> for more information <a src="./REQUIREMENTS.md" >Requirment</a> </p>
 
 <table>
@@ -168,16 +170,14 @@ check from <a href="./REQUIREMENTS.md" >Requirement</a>
 
  <h4><a id="id7"> Testing </a> </h4> 
  
-<code> npm run test </code>
-
-<code>
- shell
+<code> npm run test 
+shell
 yarn run v1.22.19
 warning package.json: "test" is also the name of a node core module
 $ npx tsc && jasmine
 Jasmine started
 Server is starting at port:4000
-::ffff:127.0.0.1 - GET  HTTP/1.1 200 2392 - 5.839 ms
+::ffff:127.0.0.1 - GET  HTTP 1.1 200 2392 - 5.839 ms
 
   1 Testing endpoints response
     √ test hello world endpoint
