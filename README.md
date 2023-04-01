@@ -99,7 +99,6 @@ I have Creted a Shell inside the repo  you can check From my document here <a hr
             <td>CREATE</td>
             <td>invalid require token</td>
         </tr>
-        </tr>
         <tr>
             <td>/api/products/create</td>
             <td>CREATE</td>
@@ -148,7 +147,7 @@ I have Creted a Shell inside the repo  you can check From my document here <a hr
         <tr>
             <td>/api/orders/createorder</td>
             <td>POST</td>
-            <td>valid</td>
+            <td>valid /td>
         </tr>
         <tr>
             <td>/api/orders/:oid/addproductorder</td>
@@ -160,10 +159,9 @@ I have Creted a Shell inside the repo  you can check From my document here <a hr
             <td>GET</td>
             <td>valid</td>
         </tr>
-    </tbody>
-</table>
+     </tbody> <table>
 
-
+<hr>
 
 <a id="id6"> DATABASE </a> 
 
