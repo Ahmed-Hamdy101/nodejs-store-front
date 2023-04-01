@@ -41,20 +41,18 @@ or
 <br>
 
 or you can go to **Step by step** 
-##### <a id="id1" href="#"> Step by step   Connect to database and create Env Files</a> :
+<h1><a id="id1" href="#"> Step by step   Connect to database and create Env Files</a> </h1>
 
 for how to setup  env file go to check from here <a  href="https://htmlpreview.github.io/?https://github.com/Turria101/Store-Front/blob/master/src/docs/Create-env.html" > connect to database and create env</a>
 
-#
-##### <a id="id2"> Package installation instructions</a> :
+<h1><a id="id2"> Package installation instructions</a> </h1>
 
 for how to setup packages check from here <a  href="https://htmlpreview.github.io/?https://github.com/Turria101/Store-Front/blob/master/src/docs/packages.html" > install packages</a>
-#
-##### <a id="id3">Run The   server</a> :
+<h2> <a id="id3">Run The   server</a> </h2>
 run this command
-* npm
-> npm run start
-
+```npm
+npm run start
+```
 * yarn
 > yarn start
 
