@@ -12,7 +12,7 @@
 </div>
 <h3>  Welcome in udacity Store Front </h3>
 
-* <p>  this is  udacity app  store front created  processing CRUD on that partical system </p>
+ <p>  this is  udacity app  store front created  processing CRUD on that partical system </p>
 
 ## Contents:
 
@@ -165,13 +165,13 @@ I have Creted a Shell inside the repo  you can check From my document here <a hr
 
 
 
-<h3>  <a id="id6"> DATABASE </a> </h3> 
+<a id="id6"> DATABASE </a> 
 
 check from <a href="./REQUIREMENTS.md" >Requirement</a>
 
- <h4> <a id="id7"> Testing </a></h4>
+<a id="id7"> Testing </a>
  
-<code> npm run test 
+ <p> <code> npm run test 
 shell
 yarn run v1.22.19
 warning package.json: "test" is also the name of a node core module
@@ -179,10 +179,8 @@ $ npx tsc && jasmine
 Jasmine started
 Server is starting at port:4000
 ::ffff:127.0.0.1 - GET  HTTP 1.1 200 2392 - 5.839 ms
-
-  1 Testing endpoints response
+   Testing endpoints response
     √ test hello world endpoint
-
   2 Testing-user-model
     √ require get All method to be define 
     √ require userbyid method to be define 
@@ -192,10 +190,8 @@ Server is starting at port:4000
     √  Testing Controllers create user 
     √ Testing Controllers get user by id to give me all records for that specfic user 
     √ Testing Controllers get all to give me all records 
-
 Executed 9 of 9 specs SUCCESS in 0.296 sec.
 Done in 7.73s.
-
 C:\Users\Black-Gate\Documents\2nd_Project\project_2>yarn test
 yarn run v1.22.19
 warning package.json: "test" is also the name of a node core module
@@ -203,7 +199,6 @@ $ npx tsc && jasmine
 Jasmine started
 Server is starting at port:4000
 ::ffff:127.0.0.1 - GET /api/orders/cdf55917-fe85-4611-a8ed-c6422581f240 HTTP/1.1 401 53 - 8.860 ms
-
   1 Test orders endpoint responses
     √ Testin Get order endpoint should return status code 401 if no token  verified
     √ Testing get order by id endpoint  valid token || GET ORDER by USERID endpoint should return status code 200 token verified
@@ -215,7 +210,6 @@ Server is starting at port:4000
     √ Testing  Add products to order endpoint should return status code 401 if token verified
 ::ffff:127.0.0.1 - GET /api/orders/7946a14e-9c68-404c-9e62-4f0ead9fe1f8/Orderproduct HTTP/1.1 401 53 - 0.549 ms
     √  Testing Get order products endpoint should return status code 401 if no token verified
-
 ::ffff:127.0.0.1 - POST /api/products/create HTTP/1.1 401 53 - 22.598 ms
   2 Testing endpoints products
     √  Testing  Create product endpoint should return status code 401
@@ -223,7 +217,6 @@ Server is starting at port:4000
     √  Testing Get all products endpoint should return status code 404
 ::ffff:127.0.0.1 - GET /api/products/4e08ef4f-d468-487d-bce6-6cac3c5c8554 HTTP/1.1 200 178 - 99.063 ms
     √  Testing Get product endpoint should return status code 200
-
 ::ffff:127.0.0.1 - GET /xx/users/ HTTP/1.1 404 148 - 2.042 ms
   3 Testing endpoints users
     √  Testing Second Routes endpoints Error missing addational routes return 404  !
@@ -249,7 +242,6 @@ Server is starting at port:4000
 ::ffff:127.0.0.1 - GET / HTTP/1.1 200 2392 - 5.582 ms
   4 Testing endpoints response
     √ test hello world endpoint
-
   5 Testing-product-model
     √ require getproduct All method to be define 
     √ require productbyid method to be define 
@@ -257,7 +249,6 @@ Server is starting at port:4000
     √ require create product method to be define 
     √ require create product method to be define 
     √ Testing create order to user 
-
   6 Testing-product-model
     √ require getproduct All method to be define 
     √ require productbyid method to be define 
@@ -265,7 +256,6 @@ Server is starting at port:4000
     √ create product 
     √ get product by id to give me all records for that specfic product 
     √  get ll products to give me all records 
-
   7 Testing-user-model
     √ require get All method to be define 
     √ require userbyid method to be define 
@@ -275,24 +265,6 @@ Server is starting at port:4000
     √  Testing Controllers create user 
     √ Testing Controllers get user by id to give me all records for that specfic user 
     √ Testing Controllers get all to give me all records 
-
 Executed 40 of 40 specs SUCCESS in 0.911 sec.
-Done in 7.72s.```
-</code>
-
-
-
-
-
-
-    
-
-  
-
-
-  
-
-  
-  
-  
-  
+Done in 7.72s
+</code></p>
