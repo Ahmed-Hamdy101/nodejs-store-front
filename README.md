@@ -1,4 +1,4 @@
-<img scr="./src/template/uda4.png" />
+<img src="./src/template/uda4.png" />
 <div id="header" align="center">
 
   <div id="badges">
@@ -67,14 +67,13 @@ Server port : 4000
 Database port : 5432
 Server : localhost
 ```
-#
-##### <a id="id4">Win-Shell</a> :
+<h1> <a id="id4">Win-Shell</a> </h1>:
 Working on Windows i haven't tested on liux machine  yet 
 I have Creted a Shell inside the repo 
 you can check From my document here [ shell](https://htmlpreview.github.io/?https://github.com/Turria101/Store-Front/blob/master/src/docs/shell.html) 
 
-<h1> <a id="id5">All API</a> </h2> :
-for more information <a src="./REQUIREMENTS.md" >Requirment</a>
+<h1> <a id="id5" >All API</a> </h1> 
+<p> for more information <a src="./REQUIREMENTS.md" >Requirment</a> </p>
 
 <table>
     <th>
@@ -166,10 +165,11 @@ for more information <a src="./REQUIREMENTS.md" >Requirment</a>
 
 
 
-<h3>  <a id="id6"> DATABASE </a> </h3> : 
+<h3>  <a id="id6"> DATABASE </a> </h3> 
 check from <a href="./REQUIREMENTS.md" >Requirement</a>
 
- <h4><a id="id7"> Testing </a> </h4> :
+ <h4><a id="id7"> Testing </a> </h4> 
+ 
 <code> npm run test </code>
 
 <code>
